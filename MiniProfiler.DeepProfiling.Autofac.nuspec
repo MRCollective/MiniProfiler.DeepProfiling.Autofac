@@ -31,7 +31,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="MiniProfiler.NHibernate\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.dll" target="lib\NET40" />
-    <file src="MiniProfiler.NHibernate\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.pdb" target="lib\NET40" />
+    <file src="MiniProfiler.DeepProfiling.Autofac\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.dll" target="lib\NET40" />
+    <file src="MiniProfiler.DeepProfiling.Autofac\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.pdb" target="lib\NET40" />
   </files>
 </package>

@@ -1,0 +1,37 @@
+﻿<?xml version='1.0' encoding='UTF-8'?> 
+<package>
+  <metadata>
+    <id>
+      MiniProfiler.DeepProfiling.Autofac
+    </id>
+    <version>
+      2.1.0.0
+    </version>
+    <authors>
+      mdaviesnet
+    </authors>
+    <description>
+      Automatically supports profiling all methods called on interfaces resolved from an Autofac IoC container.
+    </description>
+    <projectUrl>
+      https://github.com/MattDavies/MiniProfiler.DeepProfiling.Autofac
+    </projectUrl>
+    <licenseUrl>
+      https://github.com/MattDavies/MiniProfiler.DeepProfiling.Autofac/blob/master/LICENSE.txt
+    </licenseUrl>
+    <tags>
+      profiler, sql, mvc, asp.net, performance, profiling, timing, autofac, miniprofiler
+    </tags>
+    <language>
+      en-US 
+    </language>
+    <dependencies>
+	  <dependency id="MiniProfiler" version="2.1.0" />
+      <dependency id="Autofac.Extras.DynamicProxy2" version="3.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="MiniProfiler.NHibernate\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.dll" target="lib\NET40" />
+    <file src="MiniProfiler.NHibernate\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.pdb" target="lib\NET40" />
+  </files>
+</package>

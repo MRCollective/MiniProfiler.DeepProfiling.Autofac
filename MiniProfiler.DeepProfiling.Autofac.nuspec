@@ -27,7 +27,7 @@
     </language>
     <dependencies>
 	  <dependency id="MiniProfiler" version="2.1.0" />
-      <dependency id="Autofac.Extras.DynamicProxy2" version="3.0.0" />
+      <dependency id="Autofac" version="3.0.1" />
     </dependencies>
   </metadata>
   <files>

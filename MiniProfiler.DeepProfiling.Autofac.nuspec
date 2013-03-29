@@ -5,7 +5,7 @@
       MiniProfiler.DeepProfiling.Autofac
     </id>
     <version>
-      2.1.0.0
+      2.1.0.1
     </version>
     <authors>
       mdaviesnet
@@ -27,7 +27,7 @@
     </language>
     <dependencies>
 	  <dependency id="MiniProfiler" version="2.1.0" />
-      <dependency id="Autofac" version="3.0.1" />
+      <dependency id="Autofac" version="2.6.3.862" />
     </dependencies>
   </metadata>
   <files>

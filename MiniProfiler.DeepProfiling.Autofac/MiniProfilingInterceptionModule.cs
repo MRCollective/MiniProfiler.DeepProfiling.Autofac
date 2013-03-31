@@ -8,6 +8,8 @@ namespace StackExchange.Profiling.DeepProfiling.Autofac
 {
     public class MiniProfilerInterceptionModule : Module
     {
+        private static readonly ProxyGenerator ProxyGenerator = new ProxyGenerator();
+
         protected override void AttachToComponentRegistration(IComponentRegistry componentRegistry, IComponentRegistration registration)
         {
             registration.Activating += (sender, e) =>
@@ -20,7 +22,7 @@ namespace StackExchange.Profiling.DeepProfiling.Autofac
                     return;
                 }
 
-                e.Instance = new ProxyGenerator().CreateInterfaceProxyWithTarget(serviceType, e.Instance, new ProfilingInterceptor());
+                e.Instance = ProxyGenerator.CreateInterfaceProxyWithTarget(serviceType, e.Instance, new ProfilingInterceptor());
             };
 
             base.AttachToComponentRegistration(componentRegistry, registration);

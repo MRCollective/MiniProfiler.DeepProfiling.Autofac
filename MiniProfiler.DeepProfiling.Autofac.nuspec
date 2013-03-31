@@ -5,7 +5,7 @@
       MiniProfiler.DeepProfiling.Autofac
     </id>
     <version>
-      2.1.0.2
+      2.1.0.3
     </version>
     <authors>
       mdaviesnet
@@ -28,11 +28,10 @@
     <dependencies>
 	  <dependency id="MiniProfiler" version="2.1.0" />
       <dependency id="Autofac" version="2.6.3.862" />
-      <dependency id="Castle.Core" version="3.0.0.4001" />
     </dependencies>
   </metadata>
   <files>
-    <file src="MiniProfiler.DeepProfiling.Autofac\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.dll" target="lib\NET40" />
-    <file src="MiniProfiler.DeepProfiling.Autofac\bin\Release\StackExchange.Profiling.DeepProfiling.Autofac.pdb" target="lib\NET40" />
+    <file src="MiniProfiler.DeepProfiling.Autofac\bin\Release\Combined\StackExchange.Profiling.DeepProfiling.Autofac.dll" target="lib\NET40" />
+    <file src="MiniProfiler.DeepProfiling.Autofac\bin\Release\Combined\StackExchange.Profiling.DeepProfiling.Autofac.pdb" target="lib\NET40" />
   </files>
 </package>

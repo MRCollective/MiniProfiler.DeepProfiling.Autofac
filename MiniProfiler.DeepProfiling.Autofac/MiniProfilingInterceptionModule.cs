@@ -14,15 +14,21 @@ namespace StackExchange.Profiling.DeepProfiling.Autofac
         {
             registration.Activating += (sender, e) =>
             {
+                if (e.Instance is IProxyTargetAccessor)
+                    return;
+
+                var services = registration.Services;
+
                 //Todo: Unit tests
                 //Todo: Ensure this works for special cases: IEnumerable, Func etc
-                var serviceType = ((TypedService)registration.Services.First()).ServiceType;
-                if (!serviceType.IsInterface || !serviceType.IsVisible || serviceType.IsAssignableTo<IEnumerable>() || e.Instance is IProxyTargetAccessor)
-                {
-                    return;
-                }
 
-                e.Instance = ProxyGenerator.CreateInterfaceProxyWithTarget(serviceType, e.Instance, new ProfilingInterceptor());
+                var proxyServices = services.Select(s => ((TypedService)s).ServiceType)
+                    .Where(s => s.IsInterface && s.IsVisible && !s.IsAssignableTo<IEnumerable>())
+                    .ToList();
+                if (!proxyServices.Any())
+                    return;
+
+                e.Instance = ProxyGenerator.CreateInterfaceProxyWithTarget(proxyServices.First(), proxyServices.Skip(1).ToArray(), e.Instance, new ProfilingInterceptor());
             };
 
             base.AttachToComponentRegistration(componentRegistry, registration);

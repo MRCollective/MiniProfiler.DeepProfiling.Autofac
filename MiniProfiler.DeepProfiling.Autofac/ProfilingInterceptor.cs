@@ -3,7 +3,7 @@ using Castle.DynamicProxy;
 
 namespace StackExchange.Profiling.DeepProfiling.Autofac
 {
-    internal class ProfilingInterceptor : IInterceptor
+    public class ProfilingInterceptor : IInterceptor
     {
         public void Intercept(IInvocation invocation)
         {

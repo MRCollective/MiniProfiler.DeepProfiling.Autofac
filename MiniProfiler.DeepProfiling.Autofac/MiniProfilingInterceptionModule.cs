@@ -22,7 +22,7 @@ namespace StackExchange.Profiling.DeepProfiling.Autofac
                 //Todo: Unit tests
                 //Todo: Ensure this works for special cases: IEnumerable, Func etc
 
-                var proxyServices = services.Select(s => ((TypedService)s).ServiceType)
+                var proxyServices = services.Select(s => ((IServiceWithType)s).ServiceType)
                     .Where(s => s.IsInterface && s.IsVisible && !s.IsAssignableTo<IEnumerable>())
                     .ToList();
                 if (!proxyServices.Any())
